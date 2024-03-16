@@ -361,29 +361,41 @@ function MailIcon(props) {
   )
 }
 
+export const metadata = {
+  title: "Prabir Kalwani ",
+  description:
+    "Prabir Kalwani | Full stack App & Web Developer based out of Mumbai ,India",
+  keywords:
+    "Prabir Kalwani , Programmer , NMIMS , Engineer , Web Developer , App Developer , MERN Stack , Flutter",
+  url: "https://prabir.in/",
+  imageUrl: "https://metadatawebsite.s3.eu-north-1.amazonaws.com/Meta-Banner.png",
+};
+
+
 
 
 export default function About() {
   return (
     <>
       <Head>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Prabir Kalwani </title>
-		<meta name="title" content="Prabir Kalwani " />
-		<meta name="description" content="Prabir Kalwani | Full stack App & Web Developer based out of Mumbai ,India " />
+      <head>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={metadata.url} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.imageUrl} />
 
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://prabir.in/" />
-		<meta property="og:title" content="Prabir Kalwani " />
-		<meta property="og:description" content="Prabir Kalwani | Full stack App & Web Developer based out of Mumbai ,India " />
-		<meta property="og:image" content="https://metadatawebsite.s3.eu-north-1.amazonaws.com/Meta-Banner.png" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={metadata.url} />
+        <meta property="twitter:title" content={metadata.title} />
+        <meta property="twitter:description" content={metadata.description} />
+        <meta property="twitter:image" content={metadata.imageUrl} />
 
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://prabir.in/" />
-		<meta property="twitter:title" content="Prabir Kalwani " />
-		<meta property="twitter:description" content="Prabir Kalwani | Full stack App & Web Developer based out of Mumbai ,India " />
-		<meta property="twitter:image" content="https://metadatawebsite.s3.eu-north-1.amazonaws.com/Meta-Banner.png" />
-      
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+
+        <link rel="canonical" href={metadata.url} />
+
+      </head>
       </Head>
       <Container className="mt-16 sm:mt-32" id='about-section'>
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
