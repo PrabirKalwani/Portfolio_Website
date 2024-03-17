@@ -379,6 +379,8 @@ export default function About() {
     <>
       <Head>
       <head>
+        <title>{metadata.title}</title>
+        <meta property="description" content="Prabir Kalwani | Full stack App & Web Developer based out of Mumbai ,India" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={metadata.url} />
         <meta property="og:title" content={metadata.title} />
