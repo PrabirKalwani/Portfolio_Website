@@ -108,8 +108,8 @@ function Resume() {
       company: 'NCAIR (National Centre for Aerospace Innovation and Research), IIT Bombay',
       title: 'AI/ML Research Intern',
       logo: ncair,
-      start: 'Present',
-      end: 'May 2024',
+      start: '',
+      end: '',
     },
     
   ]
