@@ -12,7 +12,7 @@ import tq from '@/images/logos/logo/tq.jpg'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import trc from '@/images/logos/logo/trc.png'
-import prabir from '@/images/prabir.jpg'
+import prabir from '@/images/prabir.jpeg'
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
