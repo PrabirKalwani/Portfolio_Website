@@ -289,7 +289,7 @@ const projects = [
   {
     name: 'ChatPaLM',
     description:
-      "A Flutter-based cross-platform mobile application with Firebase Authentication and Text Generation by the PaLM LLM.",
+      "A Flutter-based :- cross-platform mobile application with Firebase Authentication and Text Generation by the PaLM LLM.",
     link: {
       href: 'https://medium.com/google-cloud/introducing-chatpalm-b11ed75f083f',
       label: 'Medium',
