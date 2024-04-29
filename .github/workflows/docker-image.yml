@@ -13,18 +13,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Build docker image
         run: docker build -t prabirkalwani/portfolio .
-      - name: Login to docker hub
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} 
-      - name: Publish image to docker hub
+      - name: Login to Docker Hub
+        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      - name: Publish image to Docker Hub
         run: docker push prabirkalwani/portfolio:latest
 
   deploy:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: Pull image from docker hub
+      - name: Pull image from Docker Hub
         run: docker pull prabirkalwani/portfolio:latest
       - name: Delete old container
         run: docker rm -f nextjs-app-container  
-      - name: Run docker container
-        run: docker run -d -p 3000:3000 --name nextjs-app-container prabirkalwani/portfolio 
+      - name: Run Docker container
+        run: docker run -d -p 3000:3000 --name nextjs-app-container prabirkalwani/portfolio:latest
