@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { scroll } from 'react-scroll';
 
 import { Container } from '@/components/Container'
-import prabir from '@/images/prabir.jpeg'
+import prabir from '@/images/prabir.webp'
 import { Fragment, useEffect, useRef } from 'react'
 function CloseIcon(props) {
   return (

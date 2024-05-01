@@ -2,17 +2,17 @@ import Image from 'next/future/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import Head from 'next/head'
-import conclave from '@/images/logos/logo/conclave.jpg'
-import delego from '@/images/logos/logo/delego.jpg'
-import gemini from '@/images/logos/logo/gemini.jpg'
-import palm from '@/images/logos/logo/palm.png'
-import munsoc from '@/images/logos/logo/munsoc.png'
-import sattva from '@/images/logos/logo/sattva.jpg'
-import tq from '@/images/logos/logo/tq.jpg'
+import conclave from '@/images/logos/logo/conclave.webp'
+import delego from '@/images/logos/logo/delego.webp'
+import gemini from '@/images/logos/logo/gemini.webp'
+import palm from '@/images/logos/logo/palm.webp'
+import munsoc from '@/images/logos/logo/munsoc.webp'
+import sattva from '@/images/logos/logo/sattva.webp'
+import tq from '@/images/logos/logo/tq.webp'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import trc from '@/images/logos/logo/trc.png'
-import prabir from '@/images/prabir.jpeg'
+import trc from '@/images/logos/logo/trc.webp'
+import prabir from '@/images/prabir.webp'
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
@@ -22,8 +22,8 @@ import {
 
 } from '@/components/SocialIcons'
 
-import ncair from '@/images/logos/logo/ncair.jpg'
-import p from '@/images/logos/logo/p.png'
+import ncair from '@/images/logos/logo/ncair.webp'
+import p from '@/images/logos/logo/p.webp'
 import { Section } from '@/components/Section'
 
 function SpeakingSection({ children, ...props }) {
@@ -38,7 +38,7 @@ function SpeakingSection({ children, ...props }) {
 function Appearance({ title, description, event, cta, href }) {
   return (
     <Card as="article">
-      <Card.Title as="h3" href={href}>
+      <Card.Title as="h3"       target="_blank"  href={href}>
         {title}
       </Card.Title>
       <Card.Eyebrow decorate>{event}</Card.Eyebrow>
@@ -263,7 +263,70 @@ function Vol() {
 
 
 
+const articles = [
+  {
+    name: 'Harnessing the Power of GitHub Actions and Docker for Effortless Next.js CI/CD ',
+    description:
+      "Setting Up Automated Build and Deployment Pipelines for Next.js Applications      ",
+    link: {
+      href: 'https://medium.com/@prabir.kalwani/harnessing-the-power-of-github-actions-and-docker-for-effortless-next-js-ci-cd-0faabd032291',
+      label: 'Article',
+    },
+    date: 'May 1st, 2024',
+  },
+  {
+    name: 'Leveraging React and Firebase for Efficient CRUD Operations in a College Management System',
+    description:
+      "A Secure React-based Web application with Firebase Authentication and Scalable Document Database.      ",
+    link: {
+      href: 'https://medium.com/@prabir.kalwani/leveraging-react-and-firebase-for-efficient-crud-operations-in-a-college-management-system-af65f7096be9',
+      label: 'Article',
+    },
+    date: 'March 25th, 2024',
+  },
+  {
+    name: 'Flutter MVVM Architecture & Obfuscation    ',
+    description:
+      "Writing Clean Good Production Ready Code in Flutter      ",
+    link: {
+      href: 'https://medium.com/@prabir.kalwani/flutter-mvvm-architecture-obfuscation-3f34d2dadb67',
+      label: 'Article',
+    },
+    date: 'March 12th, 2024',
+  },
+  {
+    name: 'Creating Your Own Secure Proxy Server on the Cloud',
+    description:
+      "Establish a Secure Gateway to the Internet with Your Cloud-Based Proxy Server      ",
+    link: {
+      href: 'https://medium.com/@prabir.kalwani/creating-your-own-secure-proxy-server-on-the-cloud-d3b33ca338a8',
+      label: 'Article',
+    },
+    date: 'Nov 27st, 2023',
+  },
+  
 
+  {
+    name: 'Tech Tippni 2023',
+    description:
+      "Tech Tippni is a tech conference held at MPSTME Mumbai where i had the opportunity to educated / guide students in the field of MERN Stack and web hosting using AWS ",
+    link: {
+      href: 'https://chatgemini.prabir.in',
+      label: 'Educational Talk',
+    },
+    date: 'August 18th, 2023',
+  },
+  {
+    name: 'Hosting a Website in Seconds : A Step-by-Step Guide to Using Amazon AWS S3 Serverless Platform    ',
+    description:
+      "Easily Host Your Website on Amazon AWS S3 Serverless Platform",
+    link: {
+      href: 'https://medium.com/@prabir.kalwani/hosting-a-website-in-seconds-a-step-by-step-guide-to-using-amazon-aws-s3-serverless-platform-abdc6582a91f',
+      label: 'Article',
+    },
+    date: 'August 16th, 2023',
+  },
+]
 
 
 
@@ -340,6 +403,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link
+      target="_blank"
         href={href}
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
@@ -429,6 +493,7 @@ But let me share a bit about the person behind the code. When I&apos;m not immer
                 href="https://github.com/prabirkalwani/"
                 icon={GitHubIcon}
                 className="mt-4"
+                
               >
                 Follow on GitHub
               </SocialLink>
@@ -480,7 +545,7 @@ prabir kalwani
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link   href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
@@ -497,18 +562,25 @@ prabir kalwani
         title="Some insights into my journey."
         intro="I express gratitude for the valuable exposure and experience I have gained in the realms of STEM."
       >
+
  <div className="space-y-20" id='speaking-section'>
-          <SpeakingSection title="Tech Tippni">
+ {articles.map((article)=>
+  <SpeakingSection title={article.link.label}>
             <Appearance
-              href="#"
-              title="Tech Tippni 2023"
-              description="Tech Tippni is a tech conference held at MPSTME Mumbai where i had the opportunity to educated / guide students in the field of MERN Stack and web hosting using AWS "
-              event="Educational Talk "
-              cta="August 18th, 2023"
+              href={article.link.href}
+              
+              title={article.name}
+              description={article.description}
+              event={article.link.label}
+              cta={article.date}
             />
             
           </SpeakingSection>
           
+)}  
+          
+          
+
         </div>
 
         
