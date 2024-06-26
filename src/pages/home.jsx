@@ -442,7 +442,6 @@ export default function About() {
   return (
     <>
       <Head>
-      <head>
         <title>{metadata.title}</title>
         <meta property="description" content="Prabir Kalwani | Full stack App & Web Developer based out of Mumbai ,India" />
         <meta property="og:type" content="website" />
@@ -461,7 +460,6 @@ export default function About() {
 
         <link rel="canonical" href={metadata.url} />
 
-      </head>
       </Head>
       <Container className="mt-16 sm:mt-32" id='about-section'>
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -565,7 +563,7 @@ prabir kalwani
 
  <div className="space-y-20" id='speaking-section'>
  {articles.map((article)=>
-  <SpeakingSection title={article.link.label}>
+  <SpeakingSection title={article.link.label} key={()=>{}}>
             <Appearance
               href={article.link.href}
               
