@@ -3,7 +3,9 @@ import { NextRequest, NextResponse } from 'next/server'
 
 // List of allowed external domains for future use
 const ALLOWED_DOMAINS = [
-
+  'vitals.vercel-insights.com',
+  'vercel.com',
+  'vercel-insights.com'
 ]
 
 export function middleware(request: NextRequest) {
@@ -83,9 +85,10 @@ export const config = {
      * Match all request paths except for the ones starting with:
      * - _next/static (static files)
      * - _next/image (image optimization files)
+     * - _vercel (Speed Insights and other Vercel features)
      * - favicon.ico (favicon file)
      * - public folder
      */
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.).*)',
+    '/((?!_next/static|_next/image|_vercel|favicon.ico|.*\\.).*)',
   ],
 }

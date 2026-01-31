@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import Head from 'next/head'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
@@ -32,6 +33,7 @@ export default function App({ Component, pageProps, router }) {
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />
+        <SpeedInsights />
       </div>
     </>
   )
