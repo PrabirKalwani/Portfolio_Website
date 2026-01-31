@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import Head from 'next/head'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { SpeedInsights } from '@vercel/speed-insights/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
