@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Analytics } from '@vercel/analytics/next'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
@@ -34,6 +35,7 @@ export default function App({ Component, pageProps, router }) {
         </main>
         <Footer />
         <SpeedInsights />
+        <Analytics />
       </div>
     </>
   )
