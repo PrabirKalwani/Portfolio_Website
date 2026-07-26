@@ -4,6 +4,10 @@ A personal portfolio website built with Next.js to showcase projects, skills, an
 
 ## Tech Stack
 
+
+
+
+
 - Next.js
 - React
 - JavaScript or TypeScript
